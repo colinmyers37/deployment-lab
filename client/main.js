@@ -1,7 +1,14 @@
-let purchaseBtn = document.getElementById('purchase-btn')
+
+let homeCards = document.querySelector('.home-cards')
+
+
 
 const purchase = evt => {
-    alert("Added to your cart!")
+    if (evt.target.classList.contains('purchase-btn')) {
+     alert("Added to your cart!")
+    } else {
+        alert("Please press the button to add the item to your cart")
+    }
 }
 
 
@@ -10,4 +17,5 @@ const purchase = evt => {
 
 
 
-purchaseBtn.addEventListener('click', purchase)
+
+homeCards.addEventListener('click', purchase)
