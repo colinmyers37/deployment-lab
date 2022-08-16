@@ -11,4 +11,10 @@ getCss: (req, res) => {
 getJs: (req, res) => {
     res.sendFile(path.join(__dirname, '../../client/main.js'))
 },
+getPricing: (req, res) => {
+    res.sendFile(path.join(__dirname, '../../client/pricing.html'))
+},
+getLessons: (req, res) => {
+    res.sendFile(path.join(__dirname, '../../client/lessons.html'))
+},
 }
