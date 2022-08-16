@@ -9,7 +9,7 @@ app.use(express.static('client'));
 
 const port = process.env.PORT || 4004;
 
-const { getLandingPage, getCss, getJs } = require ("./controller/controller")
+const { getLandingPage, getCss, getJs } = require ("./controller.js/controller")
 
 app.get('/', getLandingPage)
 app.get('/css', getCss)
