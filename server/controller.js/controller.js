@@ -11,10 +11,10 @@ var rollbar = new Rollbar({
 
 module.exports = {
 getLandingPage: (req, res) => {
-    rollbar.log("it's working")
  res.sendFile(path.join(__dirname, '../../client/index.html'))
 },
 getCss: (req, res) => {
+    rollbar.log("it's working")
     res.sendFile(path.join(__dirname, '../../client/style.css'))
 },
 getJs: (req, res) => {
