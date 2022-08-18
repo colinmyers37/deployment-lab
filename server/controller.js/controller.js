@@ -1,8 +1,17 @@
 const path = require('path');
 
+require("dotenv").config()
+var Rollbar = require('rollbar')
+var rollbar = new Rollbar({
+  accessToken: process.env.ACCESS_TOKEN,
+  captureUncaught: true,
+  captureUnhandledRejections: true,
+})
+
 
 module.exports = {
 getLandingPage: (req, res) => {
+    rollbar.log("it's working")
  res.sendFile(path.join(__dirname, '../../client/index.html'))
 },
 getCss: (req, res) => {
